@@ -1,4 +1,4 @@
-import { GoChevronDown, GoBriefcase,GoSearch } from "react-icons/go";
+import { GoChevronDown, GoBriefcase,GoSearch,GoX } from "react-icons/go";
 import { BiSolidOffer } from "react-icons/bi";
 import { IoHelpBuoyOutline ,IoPersonOutline} from "react-icons/io5";
 import { CiShoppingCart } from "react-icons/ci";
@@ -12,14 +12,21 @@ function Header(){
     return (
         <>
         <div 
-            className="black-overlay duration-500 cursor-pointer" 
+            className="black-overlay w-full h-full fixed cursor-pointer" 
             style={{
                 opacity:toggle?1:0,
                 visibility:toggle?"visible":"hidden"
             }} 
             onClick={() => setToggle(false)}
         >
-            <div className="h-full w-48 bg-white shadow-lg"></div>
+            <div className="h-full w-2/5 bg-white shadow-lg">
+                <div className="border pl-30 pt-8">
+                    <div className="mb-[30px]"><GoX className="text-2xl"/></div>
+                    <div className="border h-[50px] flex items-center">
+                        <input className="pl-[20px] pr-[72px] w-full" placeholder="Search for area, street name..." ></input>
+                    </div>
+                </div>
+            </div>
         </div>
         <header className="p-[15px] shadow-xl">
             <div className='border border-red-500 mx-30 flex items-center'>
