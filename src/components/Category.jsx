@@ -7,9 +7,9 @@ function Category(){
             What's on your mind?
            </div>
 
-           <div className="flex items-center">
-           <GoArrowLeft className="w-5 h-5 bg-blue-500 rounded-full"/>
-           <GoArrowRight />
+           <div className="flex items-center flex items-center ">
+            <div className="w-[30px] h-[30px] bg-[#e2e2e7] rounded-full mx-2 flex justify-center items-center"><GoArrowLeft /></div>
+            <div className="w-[30px] h-[30px] bg-[#e2e2e7] rounded-full mx-2 flex justify-center items-center"><GoArrowRight /></div>
            </div>
         </div>
     )
