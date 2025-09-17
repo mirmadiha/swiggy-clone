@@ -11,14 +11,14 @@ function Category(){
     }, []);
 
     const nextSlide=()=>{
-        if(category.length-5==slide){
+        if(slide >= category.length - 8){
             return false;
         }
         setSlide(slide+3);
     }
 
     const prevSlide=()=>{
-        if(category.length-5==slide){
+        if(slide <=0){
             return false;
         }
         setSlide(slide-3);
@@ -43,7 +43,7 @@ function Category(){
                 return (
                     <div style={{
                         transform:`translateX(-${slide*100}%)`
-                    }} key={index} className="w-[151px] shrink-0"> 
+                    }} key={index} className="w-[158px] shrink-0"> 
                         <img src={`/images/${cat.image}`}  
                         alt={cat.path}
                         />
