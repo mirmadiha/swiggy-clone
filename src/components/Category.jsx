@@ -27,7 +27,7 @@ function Category(){
     return(
         <div className="ml-45 mr-45 p-[16px]">
         <div className="flex justify-between items-center">
-           <div>  
+           <div className="text-xl font-bold">  
             What's on your mind?
            </div>
 
@@ -38,7 +38,7 @@ function Category(){
            </div>
 
 
-           <div className="flex border border-red-600 overflow-hidden">
+           <div className="flex overflow-hidden">
            {category.map((cat, index) => {
                 return (
                     <div style={{
@@ -51,6 +51,7 @@ function Category(){
                 )
            })}
            </div>
+           <hr className="my-6 border-[1px] border-[#e2e2e7]"/>
         </div>
     )
 };
