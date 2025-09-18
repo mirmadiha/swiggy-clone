@@ -15,18 +15,46 @@ function TopRestaurants(){
     },[])
 
     const nextSlide=()=>{
-        const maxSlide = Math.max(0, data.length - 4);
-        if(slide >= maxSlide){
-            return false;
+        const cardWidth = 305; // 273px + 32px gap
+        const containerWidth = 1200;
+        const totalCardsWidth = data.length * cardWidth;
+        
+        // Calculate how much we can still slide
+        const currentPosition = slide * cardWidth;
+        const remainingSpace = totalCardsWidth - currentPosition - containerWidth;
+        
+        // If there's still space to slide
+        if(remainingSpace > 0){
+            // If remaining space is less than a full card, move by a bit more than the remaining amount
+            if(remainingSpace < cardWidth){
+                setSlide(slide + (remainingSpace / cardWidth) + 0.4);
+            } else {
+                // Otherwise move by one full card
+                setSlide(slide + 1);
+            }
         }
-        setSlide(slide+1);
     }
 
     const prevSlide=()=>{
         if(slide <=0){
             return false;
         }
-        setSlide(slide-1);
+        
+        const cardWidth = 305; // 273px + 32px gap
+        const containerWidth = 1200;
+        const totalCardsWidth = data.length * cardWidth;
+        
+        // Calculate how much we can still slide back
+        const currentPosition = slide * cardWidth;
+        const remainingSpaceBack = currentPosition;
+        
+        // If we're near the beginning and there's not much space back, move by less
+        if(remainingSpaceBack < cardWidth){
+            setSlide(Math.max(0, slide - (remainingSpaceBack / cardWidth)));
+        } else {
+            // Otherwise move by one full card
+            setSlide(slide-1);
+        }
     }
 
     return(
@@ -46,10 +74,12 @@ function TopRestaurants(){
                 {data.map((restaurant, index) => (
                     <div
                         key={index}
-                        style={{ transform: `translateX(-${slide*100}%)` }}
+                        style={{
+                            transform:`translateX(-${slide * (273 + 32)}px)`
+                        }}
                         className="w-[273px] shrink-0"
                     >
-                        <Card restaurant={restaurant} />
+                        <Card {...restaurant} />
                     </div>
                 ))}
            </div>
