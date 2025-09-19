@@ -25,7 +25,7 @@ function Category(){
     }
 
     return(
-        <div className="ml-45 mr-45 p-[16px]">
+        <div className="max-w-[1200px] mx-auto">
         <div className="flex justify-between items-center">
            <div className="text-xl font-bold">  
             What's on your mind?

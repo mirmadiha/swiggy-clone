@@ -58,7 +58,7 @@ function TopRestaurants(){
     }
 
     return(
-        <div className="max-w-[1200px] ml-45 mr-45 p-[16px] mb-[100px]">
+        <div className="max-w-[1200px] mx-auto">
         <div className="flex justify-between items-center my-5">
            <div className="text-xl font-bold">  
             Top restaurant chains in Jammu
@@ -83,6 +83,7 @@ function TopRestaurants(){
                     </div>
                 ))}
            </div>
+           <hr className="my-6 border-[1px] border-[#e2e2e7]"/>
            </div>
 )}
 

@@ -1,12 +1,12 @@
 function Card(props){
     return(
-        <div className="w-[273px] shrink-0 grow ">
-             <div className="h-[182px] rounded-[15px] overflow-hidden relative">
+        <div className="w-[273px] shrink-0 grow mb-10">
+             <div className=" group h-[182px] rounded-[15px] overflow-hidden relative">
                 
              <img
                     src={props ? `/images/${props.image}` : ""} 
                     alt={props ? props.title : "restaurant image"}
-                    className="w-full h-full object-cover"
+                    className="group-hover:scale-110 duration-150 w-full h-full object-cover"
                 />
 
                 <div className="image-overlay absolute w-full h-full top-0 flex items-end p-2 text-15px] font-bold text-white tracking-tighter overflow-hidden">
@@ -23,7 +23,7 @@ function Card(props){
                     <span className="ml-2">{props.minTime}-{props.maxTime}</span>
                 </div>
 
-                <div>
+                <div className="text-slate-700">
                     {props.name}
                     <br/>
                     {props.place}
