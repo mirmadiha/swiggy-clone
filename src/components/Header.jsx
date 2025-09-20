@@ -79,7 +79,7 @@ function Header(){
                 </button>
             </div>
         </div>
-        <header className="p-[15px] shadow-xl">
+        <header className="p-[15px] shadow-xl sticky top-0 bg-white z-[9999]">
             <div className='mx-30 flex items-center'>
                 <div className='w-[60px]'>
                     <img src="/images/logo.png" alt="logo" className="w-full" />
