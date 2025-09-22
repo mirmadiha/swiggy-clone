@@ -1,6 +1,6 @@
 function Card(props){
     return(
-        <div className="w-[273px] shrink-0 grow mb-10">
+        <div className="w-full md:w-[273px] shrink-0 grow-1 mb-10">
              <div className=" group h-[182px] rounded-[15px] overflow-hidden relative">
                 
              <img

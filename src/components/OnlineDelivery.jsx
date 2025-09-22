@@ -37,7 +37,7 @@ function OnlineDelivery(){
            Restaurants with online food delivery in Jammu
            </div>
 
-            <div className={`${isTop ?"fixed top-0 z-[99999] bg-white w-full left-0 pl-30 h-full": "" }`}>
+            <div className={`${isTop ?"fixed top-0 z-[99999] bg-white w-full left-0 pl-30 h-": "" }`}>
             <div className="max-w-[1200px] mx-auto flex gap-3 mt-6 mb-8">
                 <div className="p-3 rounded-md shadow">Filter</div>
                 <div className="p-3 rounded-md shadow">Sort by</div>
