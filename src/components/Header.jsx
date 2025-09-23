@@ -49,10 +49,11 @@ function Header(){
     return (
         <>
         <div 
-            className="black-overlay w-full h-full fixed cursor-pointer" 
+            className="black-overlay w-full h-full fixed cursor-pointer px-2" 
             style={{
                 opacity:toggle?1:0,
-                visibility:toggle?"visible":"hidden"
+                visibility:toggle?"visible":"hidden",
+                zIndex:9999999999999
             }} 
             onClick={hideSideMenu}
         >
@@ -89,7 +90,7 @@ function Header(){
                     <span className="ml-2 text-[#ff5200] text-xl"> <GoChevronDown /> </span>
                 </div>
 
-                <nav className="ml-60 flex items-center place-content-between w-full">
+                <nav className="hidden md:ml-60 flex items-center place-content-between w-full">
 
                 {
                     links.map((link,index)=>{

@@ -1,6 +1,6 @@
 function Card(props){
     return(
-        <div className="w-full md:w-[273px] shrink-0 grow-1 mb-10">
+        <div className={`${props} shrink-0 mb-10`} >
              <div className=" group h-[182px] rounded-[15px] overflow-hidden relative">
                 
              <img
@@ -15,7 +15,7 @@ function Card(props){
 
              </div>
 
-                <div className="mt-3 text-xl font-bold">
+                <div className="mt-3 text-md md:text-xl font-bold">
                     {props.title}
                 </div>
                 <div>
